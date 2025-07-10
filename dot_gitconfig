@@ -1,0 +1,15 @@
+[user]
+	name = Patrik Jajcay
+	email = patrik.jajcay@microstep-mis.com
+[core]
+	autocrlf = input
+	filemode = false
+	compression = 9
+[protocol]
+	version = 2
+[merge]
+	ff = no
+[fetch]
+	prune = true
+[pull]
+	rebase = true
