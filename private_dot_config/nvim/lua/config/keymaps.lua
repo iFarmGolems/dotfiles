@@ -1,0 +1,54 @@
+-- deleting with "x" will not save the deleted text to the register
+vim.keymap.set("n", "x", '"_x')
+
+-- grug-far overrides
+vim.keymap.del({ "n", "v" }, "<leader>sr")
+
+-- normal mode
+vim.keymap.set("n", "<leader>sri", function()
+  require("grug-far").open({ prefills = { search = vim.fn.expand("<cword>"), paths = vim.fn.expand("%") } })
+end, {
+  desc = "Replace current word in current file",
+})
+
+vim.keymap.set("n", "<leader>sra", function()
+  require("grug-far").open({ prefills = { search = vim.fn.expand("<cword>") } })
+end, {
+  desc = "Replace current word in all files",
+})
+
+-- visual mode
+vim.keymap.set("v", "<leader>sri", function()
+  require("grug-far").with_visual_selection({ prefills = { paths = vim.fn.expand("%") } })
+end, {
+  desc = "Replace visual selection in current file",
+})
+
+vim.keymap.set("v", "<leader>sra", function()
+  require("grug-far").with_visual_selection()
+end, {
+  desc = "Replace visual selection in all files",
+})
+
+vim.keymap.set("n", "<leader>gc", function()
+  local git_args = { "--git-dir=/home/patrik/.dot", "--work-tree=/home/patrik" }
+  local add_command = {
+    "git",
+    "--git-dir=/home/patrik/.dot",
+    "--work-tree=/home/patrik",
+    "add",
+    ".config/nvim",
+    ".config/fish/functions",
+  }
+
+  local success = os.execute(table.concat(add_command, " "))
+
+  if not success then
+    vim.notify("Failed to add files to git!", vim.log.levels.ERROR)
+    return
+  end
+
+  Snacks.lazygit({ args = git_args })
+end, {
+  desc = "Open LazyGit pointed to doftiles",
+})
