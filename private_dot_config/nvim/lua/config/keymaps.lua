@@ -29,26 +29,3 @@ vim.keymap.set("v", "<leader>sra", function()
 end, {
   desc = "Replace visual selection in all files",
 })
-
-vim.keymap.set("n", "<leader>gc", function()
-  local git_args = { "--git-dir=/home/patrik/.dot", "--work-tree=/home/patrik" }
-  local add_command = {
-    "git",
-    "--git-dir=/home/patrik/.dot",
-    "--work-tree=/home/patrik",
-    "add",
-    ".config/nvim",
-    ".config/fish/functions",
-  }
-
-  local success = os.execute(table.concat(add_command, " "))
-
-  if not success then
-    vim.notify("Failed to add files to git!", vim.log.levels.ERROR)
-    return
-  end
-
-  Snacks.lazygit({ args = git_args })
-end, {
-  desc = "Open LazyGit pointed to doftiles",
-})
