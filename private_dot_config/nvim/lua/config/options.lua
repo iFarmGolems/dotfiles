@@ -54,3 +54,7 @@ vim.api.nvim_create_user_command("WslView", function()
   local file_folder = vim.fn.expand("%:p:h")
   vim.fn.system("wslview " .. file_folder)
 end, {})
+
+vim.api.nvim_create_user_command("EditNeovideConfig", function()
+  vim.cmd("edit " .. "/mnt/c/Users/patri/AppData/Roaming/neovide/config.toml")
+end, {})
