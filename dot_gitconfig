@@ -12,4 +12,6 @@
 [fetch]
 	prune = true
 [pull]
-	rebase = true
+  rebase = true
+[blame]
+  ignoreRevsFile = .git-blame-ignore-revs
