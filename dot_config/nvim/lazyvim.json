@@ -20,6 +20,7 @@
     "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.vue",
+    "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.ui.mini-indentscope",
     "lazyvim.plugins.extras.util.chezmoi",
     "lazyvim.plugins.extras.util.dot",
