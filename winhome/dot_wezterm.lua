@@ -13,7 +13,7 @@ config.font = wezterm.font_with_fallback({
 config.window_background_opacity = 0.98
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "NONE"
-config.color_scheme = "Gruvbox Dark (Gogh)"
+config.color_scheme = "Gruvbox dark, hard (base16)"
 
 wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})
