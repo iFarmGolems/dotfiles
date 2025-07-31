@@ -6,15 +6,10 @@
 -- [box-drawing]
 -- mode = "native"
 
+vim.cmd("cd ~")
+
 if vim.g.neovide then
-  vim.cmd("cd ~")
-
   vim.g.neovide_fullscreen = true
-
-  -- font https://neovide.dev/configuration.html?highlight=font#display
-  -- vim.o.guifont = "Comic Code Ligatures:11"
-  -- vim.g.neovide_transparency = 0.98
-
   vim.api.nvim_set_keymap("n", "<F11>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
 end
 
