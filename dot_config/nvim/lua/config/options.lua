@@ -1,11 +1,3 @@
--- %APPDATA/neovide/config.toml
--- [font]
--- normal = ["Comic Code Ligatures"]
--- size = 11
---
--- [box-drawing]
--- mode = "native"
-
 vim.cmd("cd ~")
 
 if vim.g.neovide then
