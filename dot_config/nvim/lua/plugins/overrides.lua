@@ -21,7 +21,11 @@ return {
         return source ~= "buffer"
       end, opts.sources.default)
 
-      -- opts.completion.accept.auto_brackets.enabled = false
+      opts.completion.menu.draw.columns = {
+        { "kind_icon" },
+        { "label" },
+        { "kind" },
+      }
     end,
   },
 
