@@ -3,6 +3,27 @@ return {
   { "nvim-treesitter/nvim-treesitter", opts = { indent = { enable = false } } },
 
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = {
+        enabled = false,
+      },
+      servers = {
+        vtsls = {
+          settings = {
+            javascript = {
+              suggest = {
+                names = false,
+                autoImports = false,
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
+  {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       opts.sections.lualine_y = {}
