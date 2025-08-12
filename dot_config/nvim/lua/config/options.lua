@@ -1,11 +1,11 @@
 vim.cmd("cd ~")
 
 if vim.g.neovide then
+  vim.g.snacks_animate = false
   vim.g.neovide_fullscreen = true
   vim.api.nvim_set_keymap("n", "<F11>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
 end
 
-vim.g.snacks_animate = false
 vim.g.ai_cmp = false
 
 vim.o.tabstop = 2
