@@ -1,29 +1,6 @@
 local color_scheme = "gruvbox"
 
 return {
-  -- {
-  --   "ribru17/bamboo.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("bamboo").setup({
-  --       style = "multiplex",
-  --       code_style = {
-  --         comments = { italic = false },
-  --       },
-  --     })
-  --     require("bamboo").load()
-  --   end,
-  -- },
-  -- { "Yazeed1s/oh-lucy.nvim" },
-  -- { "timmyha/henna.nvim" },
-  -- {
-  --   "wtfox/jellybeans.nvim",
-  --   priority = 1000,
-  --   config = function()
-  --     require("jellybeans").setup()
-  --   end,
-  -- },
   {
     "ellisonleao/gruvbox.nvim",
     branch = "main",
