@@ -1,7 +1,4 @@
 return {
-  -- treesitter indent causes issues
-  { "nvim-treesitter/nvim-treesitter", opts = { indent = { enable = false } } },
-
   {
     "neovim/nvim-lspconfig",
     opts = {
