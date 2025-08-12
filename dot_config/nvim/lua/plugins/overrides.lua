@@ -63,7 +63,7 @@ return {
       picker = {
         sources = {
           explorer = {
-            hidden = false,
+            hidden = true,
           },
         },
       },
