@@ -9,10 +9,6 @@ return {
         dim_inactive = false,
         transparent_mode = false,
         contrast = "hard",
-        -- terminal_colors = true, -- add neovim terminal colors
-        -- undercurl = true,
-        -- underline = true,
-        -- bold = true,
         italic = {
           strings = false,
           emphasis = true,
@@ -20,6 +16,10 @@ return {
           operators = true,
           folds = true,
         },
+        -- terminal_colors = true, -- add neovim terminal colors
+        -- undercurl = true,
+        -- underline = true,
+        -- bold = true,
         -- strikethrough = true,
         -- invert_selection = false,
         -- invert_signs = false,
@@ -34,7 +34,6 @@ return {
       })
     end,
   },
-  -- { "luisiacc/gruvbox-baby", branch = "main" },
   {
     "LazyVim/LazyVim",
     opts = {
