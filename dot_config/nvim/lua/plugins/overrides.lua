@@ -72,9 +72,9 @@ return {
     build = "make tiktoken",
   },
 
-  { "zbirenbaum/copilot.lua", opts = {
-    copilot_model = "gpt-4o-copilot",
-  } },
+  -- { "zbirenbaum/copilot.lua", opts = {
+  --   copilot_model = "gpt-4o-copilot",
+  -- } },
 
   {
     "folke/persistence.nvim",
