@@ -1,6 +1,11 @@
 -- deleting with "x" will not save the deleted text to the register
 vim.keymap.set("n", "x", '"_x')
 
+vim.keymap.set("", "<Up>", "<Nop>")
+vim.keymap.set("", "<Left>", "<Nop>")
+vim.keymap.set("", "<Right>", "<Nop>")
+vim.keymap.set("", "<Down>", "<Nop>")
+
 -- grug-far overrides
 vim.keymap.del({ "n", "v" }, "<leader>sr")
 
