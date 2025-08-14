@@ -60,6 +60,9 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      indent = {
+        enabled = false,
+      },
       picker = {
         sources = {
           explorer = {
