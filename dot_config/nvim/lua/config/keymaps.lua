@@ -70,3 +70,20 @@ vim.keymap.set("n", "<leader>fc", function()
 end, {
   desc = "Chezmoi",
 })
+
+vim.keymap.set("n", "gx", function()
+  local file = vim.fn.expand("<cfile>")
+  local isIMSSlashLink = file:match("^/ims/")
+
+  if isIMSSlashLink then
+    local localFilePath = "~/develop/repos/mis/sw/ims/ims4/Web/src/main/webapp" .. file:sub(5) -- Remove the /ims/ prefix
+    local expandedPath = vim.fn.expand(localFilePath)
+    if vim.fn.filereadable(expandedPath) == 1 then
+      vim.cmd("edit " .. expandedPath)
+    else
+      vim.notify("File does not exist: " .. expandedPath, vim.log.levels.ERROR)
+    end
+  else
+    vim.cmd("normal! gx")
+  end
+end, { desc = "Open / links as local files from project root", noremap = true })
