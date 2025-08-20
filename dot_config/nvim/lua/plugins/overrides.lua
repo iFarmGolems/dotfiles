@@ -35,8 +35,6 @@ return {
   {
     "saghen/blink.cmp",
     opts = function(_, opts)
-      opts.auto_brackets = { enabled = false }
-
       opts.sources.default = vim.tbl_filter(function(source)
         return source ~= "buffer"
       end, opts.sources.default)
@@ -83,6 +81,17 @@ return {
         .. "\n"
         .. "When outputting code, add newline after each block."
     end,
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = {
+        keymap = {
+          accept = "<M-l>",
+        },
+      },
+    },
   },
 
   {
