@@ -15,14 +15,14 @@
   "Import GeoSuite": {
     "prefix": "importgeosuite",
     "body": [
-      "const geoSuite = await import(`/ims/j2s/fragments/geosuite/geoSuite.mjs`)"
+      "const geoSuite = await import(`/ims/js2/fragments/geosuite/geoSuite.mjs`)"
     ],
     "description": "Import GeoSuite module"
   },
   "Import GeoExtras": {
     "prefix": "importgeoextras",
     "body": [
-      "const geoExtras = await import(`/ims/j2s/fragments/geosuite/geoExtras.mjs`)"
+      "const geoExtras = await import(`/ims/js2/fragments/geosuite/geoExtras.mjs`)"
     ],
     "description": "Import GeoExtras module"
   }
