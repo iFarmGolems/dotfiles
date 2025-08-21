@@ -11,5 +11,19 @@
   "JSDOC": {
     "prefix": "jsdoc",
     "body": ["/**", " * $1", " *", " * @$2 {$3}", " * @$4 {$5}", " */"]
+  },
+  "Import GeoSuite": {
+    "prefix": "importgeosuite",
+    "body": [
+      "const geoSuite = await import(`/ims/j2s/fragments/geosuite/geoSuite.mjs`)"
+    ],
+    "description": "Import GeoSuite module"
+  },
+  "Import GeoExtras": {
+    "prefix": "importgeoextras",
+    "body": [
+      "const geoExtras = await import(`/ims/j2s/fragments/geosuite/geoExtras.mjs`)"
+    ],
+    "description": "Import GeoExtras module"
   }
 }
