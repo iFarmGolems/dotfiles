@@ -18,7 +18,7 @@ config.color_scheme = "Gruvbox dark, hard (base16)"
 
 wezterm.on("gui-startup", function(cmd)
 	local screen = wezterm.gui.screens().active
-	local ratio = 0.7
+	local ratio = 0.6
 	local width, height = screen.width * ratio, screen.height * ratio
 	local tab, pane, window = wezterm.mux.spawn_window({
 		position = {
