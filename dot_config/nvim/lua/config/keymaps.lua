@@ -71,7 +71,7 @@ end, {
   desc = "Chezmoi",
 })
 
-vim.keymap.set("n", "gx", function()
+vim.keymap.set("n", "gd", function()
   local file = vim.fn.expand("<cfile>")
   local isIMSSlashLink = file:match("^/ims/")
 
@@ -84,6 +84,6 @@ vim.keymap.set("n", "gx", function()
       vim.notify("File does not exist: " .. expandedPath, vim.log.levels.ERROR)
     end
   else
-    vim.cmd("normal! gx")
+    vim.cmd("normal! gd")
   end
-end, { desc = "Open / links as local files from project root", noremap = true })
+end, { desc = "Go to definition", noremap = true })
