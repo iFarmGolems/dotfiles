@@ -29,8 +29,8 @@
   "Import whole GeoSuite": {
     "prefix": "importwholegeosuite",
     "body": [
-      "const geoSuite = await import(`/ims/js2/fragments/geosuite/geoSuite.mjs`)",
-      "const geoExtras = await import(`/ims/js2/fragments/geosuite/geoExtras.mjs`)",
+      "const geoSuite = await import(`geosuite/geoSuite.mjs`)",
+      "const geoExtras = await import(`geosuite/geoExtras.mjs`)",
       "const geoBase = geoSuite.geoBase;"
     ],
     "description": "Import both GeoSuite and GeoExtras modules"
