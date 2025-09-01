@@ -82,6 +82,7 @@ return {
     "CopilotC-Nvim/CopilotChat.nvim",
     build = "make tiktoken",
     opts = function(_, opts)
+      opts.model = "gpt-5-mini"
       opts.system_prompt = require("CopilotChat.config.prompts").COPILOT_INSTRUCTIONS.system_prompt
         .. "\n"
         .. "When outputting code, add newline after each block."
