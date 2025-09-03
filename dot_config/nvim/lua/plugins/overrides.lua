@@ -71,6 +71,11 @@ return {
       picker = {
         sources = {
           explorer = {
+            layout = {
+              layout = {
+                width = 45,
+              },
+            },
             hidden = true,
           },
         },
