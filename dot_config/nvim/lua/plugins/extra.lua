@@ -25,6 +25,10 @@ return {
             label = "Bosna 1025 DEV",
           },
           {
+            host = "192.168.111.220",
+            label = "Kocka",
+          },
+          {
             host = "10.111.2.42",
             label = "IMSASAN 991 DEV",
           },
