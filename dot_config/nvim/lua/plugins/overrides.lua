@@ -74,7 +74,7 @@ return {
             hidden = true,
             layout = {
               layout = {
-                width = 45,
+                width = 50,
               },
             },
           },
@@ -97,6 +97,7 @@ return {
   {
     "zbirenbaum/copilot.lua",
     opts = {
+
       suggestion = {
         keymap = {
           accept = "<M-l>",
