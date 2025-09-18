@@ -14,6 +14,7 @@ return {
   {
     "iFarmGolems/deploy.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
     config = function()
       require("deploy").setup({
         timeout = 10,
