@@ -7,6 +7,7 @@ if vim.g.neovide then
 end
 
 vim.g.ai_cmp = false
+vim.g.copilot_nes = true
 
 vim.o.tabstop = 2
 vim.opt.autoindent = true
