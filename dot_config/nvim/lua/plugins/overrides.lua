@@ -94,17 +94,17 @@ return {
     end,
   },
 
-  {
-    "zbirenbaum/copilot.lua",
-    opts = {
-
-      suggestion = {
-        keymap = {
-          accept = "<M-l>",
-        },
-      },
-    },
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   opts = {
+  --
+  --     suggestion = {
+  --       keymap = {
+  --         accept = "<M-l>",
+  --       },
+  --     },
+  --   },
+  -- },
 
   {
     "folke/persistence.nvim",
