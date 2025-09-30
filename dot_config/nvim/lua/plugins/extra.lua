@@ -3,6 +3,26 @@ return {
   { "lukas-reineke/virt-column.nvim", opts = {} },
 
   {
+    "MeanderingProgrammer/treesitter-modules.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    ---@module 'treesitter-modules'
+    ---@type ts.mod.UserConfig
+    opts = {
+      incremental_selection = {
+        enable = true,
+        disable = false,
+        -- set value to `false` to disable individual mapping
+        keymaps = {
+          init_selection = "<c-space>",
+          node_incremental = "<c-space>",
+          scope_incremental = false,
+          node_decremental = false,
+        },
+      },
+    },
+  },
+
+  {
     "OXY2DEV/helpview.nvim",
     lazy = false, -- Recommended
 

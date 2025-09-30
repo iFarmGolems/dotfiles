@@ -21,6 +21,17 @@ return {
   },
 
   {
+    "folke/flash.nvim",
+    keys = {
+      {
+        "<c-space>",
+        mode = { "n", "o", "x" },
+        false,
+      },
+    },
+  },
+
+  {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       opts.sections.lualine_y = {}
