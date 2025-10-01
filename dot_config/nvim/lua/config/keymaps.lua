@@ -6,9 +6,6 @@ vim.keymap.set("", "<Left>", "<Nop>")
 vim.keymap.set("", "<Right>", "<Nop>")
 vim.keymap.set("", "<Down>", "<Nop>")
 
--- grug-far overrides
-vim.keymap.del({ "n", "v" }, "<leader>sr")
-
 -- normal mode
 vim.keymap.set("n", "<leader>sri", function()
   require("grug-far").open({ prefills = { search = vim.fn.expand("<cword>"), paths = vim.fn.expand("%") } })
