@@ -21,6 +21,17 @@ return {
   },
 
   {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = {
+        keymap = {
+          accept = "<Tab>",
+        },
+      },
+    },
+  },
+
+  {
     "MagicDuck/grug-far.nvim",
     keys = {
       {
