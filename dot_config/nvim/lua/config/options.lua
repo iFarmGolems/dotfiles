@@ -41,3 +41,7 @@ vim.api.nvim_create_user_command("WslView", function()
   local file_folder = vim.fn.expand("%:p:h")
   vim.fn.system("wslview " .. file_folder)
 end, {})
+
+vim.api.nvim_create_user_command("SyncLazyVimJson", function()
+  vim.fn.system("cp ~/.config/nvim/lazyvim.json ~/.local/share/chezmoi/dot_config/nvim/lazyvim.json")
+end, {})
