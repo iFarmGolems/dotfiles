@@ -1,11 +1,6 @@
 -- deleting with "x" will not save the deleted text to the register
 vim.keymap.set("n", "x", '"_x')
 
-vim.keymap.set("", "<Up>", "<Nop>")
-vim.keymap.set("", "<Left>", "<Nop>")
-vim.keymap.set("", "<Right>", "<Nop>")
-vim.keymap.set("", "<Down>", "<Nop>")
-
 -- normal mode
 vim.keymap.set("n", "<leader>sri", function()
   require("grug-far").open({ prefills = { search = vim.fn.expand("<cword>"), paths = vim.fn.expand("%") } })
