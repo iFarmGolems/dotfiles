@@ -63,7 +63,7 @@ end, {
   desc = "Chezmoi",
 })
 
-vim.keymap.set("n", "gd", function()
+vim.keymap.set("n", "<F2>", function()
   local file = vim.fn.expand("<cfile>")
   local isIMSSlashLink = file:match("^/ims/")
 
