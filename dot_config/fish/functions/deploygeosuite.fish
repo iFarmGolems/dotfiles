@@ -6,6 +6,7 @@ function deploygeosuite
         # Create necessary directories on remote
         ssh root@$target "mkdir -p $remote_path/js2/fragments/geosuite"
         ssh root@$target "mkdir -p $remote_path/css2/fragments/geosuite"
+        ssh root@$target "mkdir -p $remote_path/build/dist/lib/thermodiagram"
 
         # Transfer the geosuite folder
         rsync -avz $local_path/js2/fragments/geosuite/ root@$target:$remote_path/js2/fragments/geosuite/
