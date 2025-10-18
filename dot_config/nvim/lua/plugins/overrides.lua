@@ -32,6 +32,11 @@ return {
   },
 
   {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    opts = { model = "grok-code-fast-1" },
+  },
+
+  {
     "MagicDuck/grug-far.nvim",
     keys = {
       {
