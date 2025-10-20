@@ -32,8 +32,17 @@ return {
   },
 
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    opts = { model = "grok-code-fast-1" },
+    "yetone/avante.nvim",
+    opts = {
+      providers = {
+        copilot = {
+          model = "grok-code-fast-1",
+        },
+      },
+      behaviour = {
+        auto_add_current_file = false,
+      },
+    },
   },
 
   {
