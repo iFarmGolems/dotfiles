@@ -33,7 +33,7 @@ return {
 
   {
     "iFarmGolems/deploy.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-neotest/nvim-nio" },
     event = "VeryLazy",
     config = function()
       require("deploy").setup({
