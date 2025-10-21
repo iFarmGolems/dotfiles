@@ -63,3 +63,33 @@ vim.api.nvim_create_user_command("SwitchIMSFileType", function()
     return
   end
 end, {})
+
+vim.api.nvim_create_user_command("CreateIMSPage", function()
+  local dir = vim.fn.input("Enter page directory (slash creates sub directory):")
+
+  if dir == "" then
+    print("No directory provided. Aborting.")
+    return
+  end
+
+  local page_name = vim.fn.input("Enter page name (without extension):")
+
+  if page_name == "" then
+    print("No page name provided. Aborting.")
+    return
+  end
+
+  local ims_root = "~/develop/repos/mis/sw/ims/ims4/Web/src/main/webapp"
+
+  local css2_path = vim.fn.expand(ims_root .. "/css2/fragments/" .. dir .. "/" .. page_name .. ".scss")
+  local html2_path = vim.fn.expand(ims_root .. "/html2/fragments/" .. dir .. "/" .. page_name .. ".html")
+  local js2_path = vim.fn.expand(ims_root .. "/js2/fragments/" .. dir .. "/" .. page_name .. ".mjs")
+
+  vim.fn.mkdir(vim.fn.fnamemodify(css2_path, ":h"), "p")
+  vim.fn.mkdir(vim.fn.fnamemodify(html2_path, ":h"), "p")
+  vim.fn.mkdir(vim.fn.fnamemodify(js2_path, ":h"), "p")
+
+  vim.fn.writefile({ "// SCSS fragment for " .. page_name }, css2_path)
+  vim.fn.writefile({ "<!-- HTML fragment for " .. page_name .. " -->" }, html2_path)
+  vim.fn.writefile({ "// JS fragment for " .. page_name }, js2_path)
+end, {})
