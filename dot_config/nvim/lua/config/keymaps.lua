@@ -79,3 +79,5 @@ vim.keymap.set("n", "<F2>", function()
     vim.cmd("normal! gd")
   end
 end, { desc = "Go to definition", noremap = true })
+
+vim.keymap.set("n", "<F3>", ":SwitchIMSFileType<CR>", { desc = "Switch IMS File type", noremap = true, silent = true })
