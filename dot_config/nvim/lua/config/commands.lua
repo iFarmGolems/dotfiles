@@ -29,38 +29,43 @@ vim.api.nvim_create_user_command("SwitchIMSFileType", function()
   local file_name = vim.fn.expand("%:t")
   local file_ext = vim.fn.expand("%:e")
 
+  local types = { "js2", "html2", "css2" }
+  local ext_map = {
+    js2 = { ".es6.js", ".mjs", ".js" },
+    html2 = { ".html" },
+    css2 = { ".css", ".scss" },
+  }
+
   local ims_type = string.match(file_dir, "/webapp/(js2)/")
     or string.match(file_dir, "/webapp/(html2)/")
     or string.match(file_dir, "/webapp/(css2)/")
 
   if ims_type then
-    local valid_extensions = { ".es6.js", ".mjs", ".js", ".html", ".css", ".scss" }
-
-    local matching_folder_types = ims_type == "js2" and { "html2", "css2" }
-      or ims_type == "html2" and { "js2", "css2" }
-      or ims_type == "css2" and { "js2", "html2" }
-      or {}
-
-    -- for each matching type, construct the corresponding file path
-    local paths_to_search = {}
-    for _, mtype in ipairs(matching_folder_types) do
-      local new_path = string.gsub(file_dir, "/" .. ims_type .. "/", "/" .. mtype .. "/")
-      table.insert(paths_to_search, new_path)
-    end
-
-    -- check for each valid extension in the constructed paths
-    for _, base_path in ipairs(paths_to_search) do
-      for _, ext in ipairs(valid_extensions) do
-        local target_file = base_path .. "/" .. string.gsub(file_name, "%." .. file_ext .. "$", ext)
-        if vim.fn.filereadable(target_file) == 1 then
-          vim.cmd("edit " .. target_file)
-          return
-        end
+    local index = -1
+    for i, t in ipairs(types) do
+      if t == ims_type then
+        index = i
+        break
       end
     end
+    if index == -1 then
+      print("Unknown IMS type")
+      return
+    end
+    local next_index = index % 3 + 1
+    local next_type = types[next_index]
+    local new_path = string.gsub(file_dir, "/" .. ims_type .. "/", "/" .. next_type .. "/")
+    local exts = ext_map[next_type]
+    for _, ext in ipairs(exts) do
+      local target_file = new_path .. "/" .. string.gsub(file_name, "%." .. file_ext .. "$", ext)
+      if vim.fn.filereadable(target_file) == 1 then
+        vim.cmd("edit " .. target_file)
+        return
+      end
+    end
+    print("No matching file found for " .. next_type)
   else
     print("File not supported")
-    return
   end
 end, {})
 
