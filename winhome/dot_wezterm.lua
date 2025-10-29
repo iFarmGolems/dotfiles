@@ -4,7 +4,7 @@ local mux = wezterm.mux
 
 config.default_domain = "WSL:WLinux"
 
-config.font_size = 11
+config.font_size = 12
 config.font = wezterm.font_with_fallback({
 	"Comic Code Ligatures",
 	"Symbols Nerd Font Mono",
