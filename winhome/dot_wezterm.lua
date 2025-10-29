@@ -11,7 +11,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 config.window_close_confirmation = "NeverPrompt"
-config.window_decorations = "TITLE"
+config.window_decorations = "NONE"
 config.window_background_opacity = 0.98
 config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = "Gruvbox dark, hard (base16)"
