@@ -1,0 +1,34 @@
+{
+  "name": "personal-snippets",
+  "displayName": "Personal Snippets",
+  "description": "A collection of personal code snippets for Lua, TypeScript React, and JavaScript React.",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "snippets",
+    "lua",
+    "typescript",
+    "javascript",
+    "react"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "typescriptreact",
+          "javascriptreact",
+          "javascript",
+          "typescript"
+        ],
+        "path": "./typescript.json"
+      }
+    ]
+  },
+  "license": "MIT"
+}
