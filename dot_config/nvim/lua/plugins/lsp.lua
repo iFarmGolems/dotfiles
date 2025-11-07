@@ -21,6 +21,7 @@ return {
 				"jsonc",
 				"tsx",
 				"css",
+				"scss",
 				"html",
 				"vim",
 				"markdown",
