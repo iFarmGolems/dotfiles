@@ -1,7 +1,0 @@
-# Windows: %APPDATA%\Roaming\neovide\config.toml
-[font]
-size = 11
-normal = ["Comic Code Ligatures"]
-
-[box-drawing]
-mode = "native"
