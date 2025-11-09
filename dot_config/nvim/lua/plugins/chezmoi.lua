@@ -47,7 +47,7 @@ return {
 		cmd = { "ChezmoiEdit" },
 		keys = {
 			{
-				"<leader>sz",
+				"<leader>fc",
 				pick_chezmoi,
 				desc = "Chezmoi",
 			},
