@@ -96,7 +96,9 @@ return {
 		{
 			"<leader>fp",
 			function()
-				Snacks.picker.projects()
+				Snacks.picker.projects({
+					dev = { "~/develop" },
+				})
 			end,
 			desc = "Projects",
 		},
