@@ -116,7 +116,7 @@ return {
 					recent = false,
 					confirm = function(picker, item)
 						picker:close()
-						Snacks.picker.files({ cwd = item.value })
+						Snacks.picker.files({ cwd = item.file })
 					end,
 				})
 			end,
