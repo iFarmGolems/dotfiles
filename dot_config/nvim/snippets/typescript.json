@@ -1,7 +1,7 @@
 {
   "Inline JSDoc comment": {
     "prefix": ["ijsdoc"],
-    "body": ["/** @${1:type} ${2} */"],
+    "body": ["/** @${1:type} {${2}} */"],
     "description": "An inline JSDoc comment."
   },
 
