@@ -21,9 +21,9 @@
     ]
   },
 
-  "Get stations from space by property": {
+  "Get stations from space by property value": {
     "prefix": ["getstationsbyproperty"],
-    "description": "RPC to get stations from spaceview",
+    "description": "RPC to get stations from spaceview by property value",
     "body": [
       "const [stationsErr, stations = []] = await rpcTry(",
       "  'com.microstepmis.envidb.util.DBDataRPC.getStationsCfgFromSpaceByPropertyValue',",
