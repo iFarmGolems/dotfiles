@@ -95,12 +95,31 @@ return {
 		},
 		{
 			"<leader>fp",
+			desc = "Projects",
 			function()
+				local projects_file_path = vim.fn.stdpath("data")
+					.. "/project_nvim/project_history"
+				local file = io.open(projects_file_path, "r")
+
+				local projects = {}
+				if file then
+					for line in file:lines() do
+						if not line:match("chezmoi") then
+							table.insert(projects, line)
+						end
+					end
+					file:close()
+				end
+
 				Snacks.picker.projects({
-					dev = { "~/develop" },
+					projects = projects,
+					recent = false,
+					confirm = function(picker, item)
+						picker:close()
+						Snacks.picker.files({ cwd = item.value })
+					end,
 				})
 			end,
-			desc = "Projects",
 		},
 		{
 			"<leader>fr",
