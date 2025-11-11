@@ -18,6 +18,12 @@ return {
 			provider = "copilot",
 			providers = {
 				copilot = { model = "grok-code-fast-1" },
+				openrouter = {
+					__inherited_from = "openai",
+					api_key_name = "OPENROUTER_API_KEY",
+					endpoint = "https://openrouter.ai/api/v1",
+					model = "minimax/minimax-m2",
+				},
 			},
 			web_search_engine = {
 				provider = "tavily",
