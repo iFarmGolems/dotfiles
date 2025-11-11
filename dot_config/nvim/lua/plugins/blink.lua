@@ -48,6 +48,13 @@ return {
 				AvantePromptInput = {},
 				["grug-far"] = {},
 			},
+			providers = {
+				snippets = {
+					opts = {
+						friendly_snippets = false,
+					},
+				},
+			},
 		},
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 	},
