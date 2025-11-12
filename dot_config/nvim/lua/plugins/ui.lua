@@ -143,7 +143,12 @@ return {
 				lualine_z = {
 					function()
 						return "D: "
-							.. (vim.g.DEPLOY_ON_SAVE and vim.g.DEPLOY_LAST_HOST or "OFF")
+							.. (
+								vim.g.DEPLOY_ON_SAVE
+									and vim.g.DEPLOY_LAST_HOST
+									and vim.g.DEPLOY_LAST_HOST.address
+								or "OFF"
+							)
 					end,
 				},
 			},
