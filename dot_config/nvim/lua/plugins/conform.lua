@@ -11,6 +11,7 @@ return {
 			timeout_ms = 500,
 		},
 		formatters_by_ft = {
+			["*"] = { "injected" }, -- enables injected-lang formatting for all filetypes
 			lua = { "stylua" },
 			javascript = { "biome" },
 			typescript = { "biome" },
@@ -20,7 +21,6 @@ return {
 			css = { "prettierd" },
 			yaml = { "prettierd" },
 			vue = { "prettierd" },
-			["*"] = { "injected" }, -- enables injected-lang formatting for all filetypes
 		},
 	},
 }
