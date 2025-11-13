@@ -16,6 +16,10 @@ return {
 					label = "Bosna 1025 PROD",
 				},
 				{
+					address = "10.111.9.231",
+					label = "Sakhalin 1309 DEV",
+				},
+				{
 					address = "192.168.111.220",
 					label = "Kocka",
 				},
