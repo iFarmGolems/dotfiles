@@ -11,7 +11,6 @@ return {
 			timeout_ms = 500,
 		},
 		formatters_by_ft = {
-			["*"] = { "injected" }, -- enables injected-lang formatting for all filetypes
 			lua = { "stylua" },
 			javascript = { "biome" },
 			typescript = { "biome" },
@@ -21,6 +20,19 @@ return {
 			css = { "prettierd" },
 			yaml = { "prettierd" },
 			vue = { "prettierd" },
+		},
+	},
+	keys = {
+		{
+			"<leader>cF",
+			function()
+				require("conform").format({
+					formatters = { "injected" },
+					timeout_ms = 3000,
+				})
+			end,
+			mode = { "n", "v" },
+			desc = "Format Injected Langs",
 		},
 	},
 }
