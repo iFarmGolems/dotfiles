@@ -31,6 +31,10 @@ return {
 					address = "192.168.151.90",
 					label = "IMSASAN 991 PROD",
 				},
+				{
+					address = "awos-dev.mstep",
+					label = "awos dev",
+				},
 			},
 			mappings = {
 				{
