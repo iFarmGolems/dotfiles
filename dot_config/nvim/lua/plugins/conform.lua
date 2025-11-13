@@ -6,6 +6,7 @@ return {
 			biome = {
 				require_cwd = true,
 			},
+			injected = { options = { ignore_errors = true } },
 		},
 		format_on_save = {
 			timeout_ms = 500,
