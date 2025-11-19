@@ -3,6 +3,20 @@ return {
 	dir = "~/develop/repos/deploy.nvim",
 	dependencies = { "nvim-lua/plenary.nvim", "nvim-neotest/nvim-nio" },
 	event = "VeryLazy",
+	keys = {
+		{
+			"<leader>df",
+			":Deploy file<CR>",
+			desc = "Deploy current file",
+			silent = true,
+		},
+		{
+			"<leader>dt",
+			":Deploy toggle<CR>",
+			desc = "Toggle deploy on save",
+			silent = true,
+		},
+	},
 	config = function()
 		require("deploy").setup({
 			timeout = 3,
