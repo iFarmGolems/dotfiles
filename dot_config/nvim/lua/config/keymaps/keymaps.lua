@@ -1,12 +1,18 @@
 vim.keymap.set(
 	"n",
-	"<leader>xx",
-	"A,<Esc>",
-	{ desc = "Add comma to the end of the line" }
+	"x",
+	'"_x',
+	{ desc = "Delete character without storing it in register" }
 )
 
--- delete character without copying to clipboard
-vim.keymap.set("n", "x", '"_x', { desc = "Delete character" })
+vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit insert mode" })
+
+vim.keymap.set(
+	"i",
+	"xx",
+	"<Esc>A,<Esc>i",
+	{ desc = "Insert comma at the end of a row" }
+)
 
 vim.keymap.set(
 	"n",
