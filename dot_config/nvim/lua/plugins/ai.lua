@@ -65,6 +65,10 @@ return {
 						adapter = "copilot",
 						model = "grok-code-fast-1",
 					},
+					inline = {
+						adapter = "copilot",
+						model = "grok-code-fast-1",
+					},
 				},
 				adapters = {
 					http = {
