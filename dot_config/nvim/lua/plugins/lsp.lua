@@ -36,7 +36,7 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "vtsls", "stylua", "biome" },
+			ensure_installed = { "lua_ls", "vtsls", "stylua", "biome", "json-lsp" },
 		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
