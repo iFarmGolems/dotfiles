@@ -1,4 +1,13 @@
 {
+
+	"Anonymous function": {
+		"prefix": ["afn"],
+		"body": [
+			"(${1}) => ${2}"
+		],
+		"description": "An anonymous function."
+	},
+
   "Inline JSDoc comment": {
     "prefix": ["ijsdoc"],
     "body": ["/** @${1:type} {${2}} */"],
