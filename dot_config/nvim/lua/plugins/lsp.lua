@@ -53,6 +53,9 @@ return {
 					"typescriptreact",
 				},
 				settings = {
+					vtsls = {
+						autoUseWorkspaceTsdk = true,
+					},
 					javascript = {
 						suggest = {
 							names = false,
