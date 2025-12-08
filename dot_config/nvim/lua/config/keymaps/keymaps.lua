@@ -16,6 +16,13 @@ vim.keymap.set(
 
 vim.keymap.set(
 	"n",
+	",,",
+	"<Esc>A,<Esc>i<Right>",
+	{ desc = "Insert comma at the end of a row" }
+)
+
+vim.keymap.set(
+	"n",
 	"<M-o>",
 	":SwitchIMSFileType<CR>",
 	{ silent = true, desc = "Switch IMS page files" }
