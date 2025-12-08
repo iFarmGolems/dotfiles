@@ -10,7 +10,7 @@ vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit insert mode" })
 vim.keymap.set(
 	"i",
 	",,",
-	"<Esc>A,<Esc>i",
+	"<Esc>A,<Esc>i<Right>",
 	{ desc = "Insert comma at the end of a row" }
 )
 
