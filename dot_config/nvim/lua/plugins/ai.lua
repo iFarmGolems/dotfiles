@@ -27,50 +27,59 @@ return {
 				desc = "Code Companion Chat",
 			},
 		},
-		config = function()
-			require("codecompanion").setup({
-				strategies = {
-					chat = {
-						adapter = "copilot",
-						model = "grok-code-fast-1",
-					},
-					inline = {
-						adapter = "copilot",
-						model = "grok-code-fast-1",
-					},
+		opts = {
+			interactions = {
+				chat = {
+					adapter = "copilot",
+					model = "claude-haiku-4.5",
 				},
-				adapters = {
-					http = {
-						openrouter = function()
-							return require("codecompanion.adapters").extend(
-								"openai_compatible",
-								{
-									env = {
-										url = "https://openrouter.ai/api",
-										api_key = "OPENROUTER_API_KEY",
-										chat_url = "/v1/chat/completions",
-									},
-									handlers = {
-										parse_message_meta = function(_, data)
-											local extra = data.extra
-											if extra and extra.reasoning then
-												data.output.reasoning = { content = extra.reasoning }
-												if data.output.content == "" then
-													data.output.content = nil
-												end
+				inline = {
+					adapter = "copilot",
+					model = "claude-haiku-4.5",
+				},
+			},
+			adapters = {
+				http = {
+					openrouter = function()
+						return require("codecompanion.adapters").extend(
+							"openai_compatible",
+							{
+								env = {
+									url = "https://openrouter.ai/api",
+									api_key = "OPENROUTER_API_KEY",
+									chat_url = "/v1/chat/completions",
+								},
+								handlers = {
+									parse_message_meta = function(_, data)
+										local extra = data.extra
+										if extra and extra.reasoning then
+											data.output.reasoning = { content = extra.reasoning }
+											if data.output.content == "" then
+												data.output.content = nil
 											end
-											return data
-										end,
+										end
+										return data
+									end,
+								},
+								schema = {
+									model = {
+										default = "deepseek/deepseek-v3.2-speciale",
+										choices = {
+											["deepseek/deepseek-v3.2-speciale"] = {},
+											["deepseek/deepseek-v3.2"] = {},
+											["openai/gpt-5.2"] = {},
+											["minimax/minimax-m2"] = {},
+										},
 									},
-								}
-							)
-						end,
-					},
+								},
+							}
+						)
+					end,
 				},
-				opts = {
-					log_level = "DEBUG",
-				},
-			})
-		end,
+			},
+			opts = {
+				log_level = "DEBUG",
+			},
+		},
 	},
 }
