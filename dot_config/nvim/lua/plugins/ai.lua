@@ -30,12 +30,16 @@ return {
 		opts = {
 			interactions = {
 				chat = {
-					adapter = "copilot",
-					model = "claude-haiku-4.5",
+					adapter = {
+						name = "copilot",
+						model = "claude-haiku-4.5",
+					},
 				},
 				inline = {
-					adapter = "copilot",
-					model = "claude-haiku-4.5",
+					adapter = {
+						name = "copilot",
+						model = "claude-haiku-4.5",
+					},
 				},
 			},
 			adapters = {
