@@ -19,7 +19,7 @@ return {
 	},
 	config = function()
 		require("deploy").setup({
-			timeout = 3,
+			timeout = 6,
 			hosts = {
 				{
 					address = "10.111.8.26",
