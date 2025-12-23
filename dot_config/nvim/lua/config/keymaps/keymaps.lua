@@ -20,3 +20,10 @@ vim.keymap.set(
 	":SwitchIMSFileType<CR>",
 	{ silent = true, desc = "Switch IMS page files" }
 )
+
+vim.keymap.set(
+	"i",
+	"<C-v>",
+	"<C-r>+",
+	{ desc = "Paste from clipboard in insert mode" }
+)
