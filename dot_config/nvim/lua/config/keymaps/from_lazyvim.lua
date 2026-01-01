@@ -159,13 +159,13 @@ map("x", ">", ">gv")
 -- commenting
 map(
 	"n",
-	"gco",
+	"gcO",
 	"o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>",
 	{ desc = "Add Comment Below" }
 )
 map(
 	"n",
-	"gcO",
+	"gco",
 	"O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>",
 	{ desc = "Add Comment Above" }
 )
