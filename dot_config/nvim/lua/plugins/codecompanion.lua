@@ -60,6 +60,7 @@ return {
 									["deepseek/deepseek-v3.2"] = {},
 									["openai/gpt-5.2"] = {},
 									["minimax/minimax-m2.1"] = {},
+									["google/gemini-3-flash-preview"] = {},
 								},
 							},
 						},
