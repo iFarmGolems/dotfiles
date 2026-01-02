@@ -45,7 +45,6 @@ return {
 			default = { "lsp", "path", "snippets", "buffer" },
 			per_filetype = {
 				codecompanion = { "codecompanion" },
-				AvantePromptInput = {},
 				["grug-far"] = {},
 			},
 			providers = {
