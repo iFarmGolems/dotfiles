@@ -59,7 +59,7 @@ return {
 									["deepseek/deepseek-v3.2-speciale"] = {},
 									["deepseek/deepseek-v3.2"] = {},
 									["openai/gpt-5.2"] = {},
-									["minimax/minimax-m2"] = {},
+									["minimax/minimax-m2.1"] = {},
 								},
 							},
 						},
