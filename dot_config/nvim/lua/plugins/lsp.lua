@@ -13,6 +13,7 @@ return {
 			TS.install({
 				"javascript",
 				"typescript",
+				"xml",
 				"vue",
 				"jsdoc",
 				"lua",
