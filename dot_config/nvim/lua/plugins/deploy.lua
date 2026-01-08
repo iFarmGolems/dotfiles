@@ -19,7 +19,7 @@ return {
 	},
 	config = function()
 		require("deploy").setup({
-			timeout = 6,
+			timeout = 10,
 			hosts = {
 				{
 					address = "10.111.8.26",
@@ -61,6 +61,10 @@ return {
 							return false
 						end
 					end,
+				},
+				{
+					fs = "/home/patrik/develop/repos/mis/sw/ims/ims4/Jlib/src/main/resources",
+					remote = "/opt/ims/bin",
 				},
 			},
 		})
